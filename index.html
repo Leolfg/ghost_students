@@ -3,34 +3,14 @@
     <script src="js/aframe.min.js"></script>
     <script src="js/aframe-extras.min.js"></script>
     
-    <!--<script>
-      AFRAME.registerComponent("distance-check", {
+    <script>
+      AFRAME.registerComponent("student-check", {
         init: function() {
-          this.box = document.querySelector("#eleve_3")
+          var x = document.querySelectorAll(".students").length;
           this.text = document.querySelector("a-text")
         },
         tick: function() {
-          let camPos = this.el.object3D.position
-          let boxPos = this.box.object3D.position
-          this.text.setAttribute("value", camPos.distanceTo(boxPos))
-        }
-      })
-    
-    </script>-->
-
-    <script>
-        AFRAME.registerComponent("distance-check-2", {
-        init: function() {
-            this.cam = document.querySelector("[camera]")
-            this.text = document.querySelector("a-text")
-
-            var students = document.querySelectorAll(".students").length;
-            console.log(students); 
-          },
-
-        tick: function() {
-          console.log(students); 
-          this.text.setAttribute("value", students)
+          this.text.setAttribute("value", x)
         }
       })
     </script>
@@ -50,7 +30,7 @@
 
         </a-assets>
 
-        <a-text position="0 1 -3" color="red" text="" value="2.017259759714594" rotation="0 130 0"></a-text>
+        <a-text position="0 1 -3" color="red" text="" value="" rotation="0 130 0"></a-text>
         <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
 
       <a-entity gltf-model="#estienne" position="-33.404 4.130 -23.70" scale="12 12 12"></a-entity>
