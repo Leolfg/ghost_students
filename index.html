@@ -24,8 +24,18 @@
             this.cam = document.querySelector("[camera]")
             var students = document.querySelectorAll(".students").length;
             console.log(students); 
+          },
+
+        tick: function() {
+          console.log(students); 
+          let camPos = this.cam.object3D.position
+          let spherePos = this.sphere.object3D.position
+          let distance = camPos.distanceTo(spherePos)
+          if (distance < 5) {
+              // camera closer than 5m, do something
           }
-        })
+        }
+      })
     </script>
 
   </head>
