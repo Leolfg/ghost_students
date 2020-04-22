@@ -8,19 +8,19 @@
       init: function () {
         var sceneEl = document.querySelector('a-scene'); //pointer vers la scène
         this.entities = sceneEl.querySelectorAll('.student'); //créer une liste des éléments avec .student, utilisée dans le tick
+        console.log(this.entities[i]); //chaque élément dans console
       },
 
       tick: function() {
         let camPos = this.el.object3D.position //obtenir position camera/player. Marche parce que script appelé depuis a-entity camera.
           for (var i = 0; i < this.entities.length; i++) { //on passe dans le tableau des élèves crée ci-dessus
-            let studentPos = i.object3D.position //ajouter [i] ?
+            let studentPos = this.object3D.position //ajouter [i] ?
             let distance = camPos.distanceTo(studentPos)
               if (distance < 5) {
               console.log('Closer than 5 units !');
               }
           }
         //ici, il faut calculer pour chaque élément si distance inférieure à ...
-                //console.log(els[i]); //chaque élément dans console
           //Chaque texte/son sera en enfant de l'élève, donc getchild et play ! hophophop
         
       }
