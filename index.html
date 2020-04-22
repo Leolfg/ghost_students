@@ -7,7 +7,7 @@
     AFRAME.registerComponent('foo', {
       init: function () {
         var sceneEl = document.querySelector('a-scene'); //pointer vers la scène
-        var studentlist = sceneEl.querySelectorAll('.student'); //chercher les élèves, lister dans els
+        this.studentlist = sceneEl.querySelectorAll('.student'); //chercher les élèves, lister dans els
 
         //var sceneEl = document.querySelector('a-scene'); //pointer vers la scène
         //this.entities = sceneEl.querySelectorAll('.student'); //créer une liste des éléments avec .student, utilisée dans le tick
@@ -18,8 +18,8 @@
         let camPos = this.el.object3D.position //obtenir position camera/player. Marche parce que script appelé depuis a-entity camera.
           for (var i = 0; i < studentlist.length; i++) { //on passe dans le tableau des élèves
             console.log(studentlist[i]);
-            
-            let studentPos = this.object3D.position //ajouter [i] ?
+
+            let studentPos = studentlist[i].object3D.position
             let distance = camPos.distanceTo(studentPos)
               if (distance < 5) {
               console.log('Closer than 5 units !');
