@@ -7,8 +7,10 @@
     AFRAME.registerComponent('foo', {
       init: function () {
         var sceneEl = document.querySelector('a-scene'); //pointer vers la scène
-        this.entities = sceneEl.querySelectorAll('.student'); //créer une liste des éléments avec .student, utilisée dans le tick
-        console.log(entities[i]); //chaque élément dans console
+        var studentlist = sceneEl.querySelectorAll('.student'); //créer une liste des éléments avec .student pour console
+        console.log(studentlist[i]); //chaque élément dans console
+
+        this.entities = sceneEl.querySelectorAll('.student'); //créer une liste des éléments avec .student pour le tick
       },
 
       tick: function() {
