@@ -8,9 +8,11 @@
         init: function() {
           var x = document.querySelectorAll(".student").length;
           this.text = document.querySelector("a-text")
+          console.log(x);
         },
         tick: function() {
           this.text.setAttribute("value", x)
+          console.log(x);
         }
       })
     </script>
