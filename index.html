@@ -19,28 +19,12 @@
     </script>-->
 
     <script>
-            AFRAME.registerComponent("distance-check-2", {
+        AFRAME.registerComponent("distance-check-2", {
         init: function() {
             this.cam = document.querySelector("[camera]")
             var students = document.querySelectorAll(".students").length;
             console.log(students); 
-            
-          },
-          tick: function() {
-            let camPos = this.cam.object3D.position
-            let spherePos = this.sphere.object3D.position
-            let distance = camPos.distanceTo(spherePos)
-
-            if (distance < 5) {
-              document.getElementById("student_message").getAttribute('visible');
-              document.getElementById("student_message").setAttribute("visible", "true");
-            }
-
-            if (distance > 5) {
-              document.getElementById("student_message").getAttribute('visible');
-              document.getElementById("student_message").setAttribute("visible", "false");
-            }
-
+          }
         }
     </script>
 
