@@ -3,7 +3,7 @@
     <script src="js/aframe.min.js"></script>
     <script src="js/aframe-extras.min.js"></script>
     
-    <script>
+   <!--  <script>
       AFRAME.registerComponent("student-check", {
         init: function() {
           var x = document.querySelectorAll(".student").length;
@@ -15,7 +15,13 @@
           console.log(x);
         }
       })
-    </script>
+    </script>-->
+<script>
+    AFRAME.registerComponent('foo', {
+      init: function () {
+        console.log(sceneEl.querySelectorAll('.student'));      }
+    });
+</script>
 
   </head>
   <body>
@@ -72,7 +78,7 @@
       <a-sky color="#ECECEC"></a-sky>
       
       <a-entity id="camera_rig" position="2.5 0.8 -8" rotation="-1 -212 0">
-      <a-entity student-check camera="fov: 50" look-controls="pointerLockEnabled: true" wasd-controls="fly: true; acceleration:95"></a-entity>
+      <a-entity camera="fov: 50" look-controls="pointerLockEnabled: true" wasd-controls="fly: true; acceleration:95"></a-entity>
       </a-entity>
 
 
