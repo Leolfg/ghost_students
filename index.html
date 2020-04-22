@@ -17,12 +17,12 @@
       tick: function() {
         let camPos = this.el.object3D.position //obtenir position camera/player. Marche parce que script appelé depuis a-entity camera.
           for (var i = 0; i < this.studentlist.length; i++) { //on passe dans le tableau des élèves
-            console.log(this.studentlist[i]);
+            //console.log(this.studentlist[i]);
 
             let studentPos = this.studentlist[i].object3D.position
             let distance = camPos.distanceTo(studentPos)
               if (distance < 5) {
-              console.log('Closer than 5 units !');
+              console.log('Closer than 2 units from ')+(this.studentlist[i]);
               }
           }
         //ici, il faut calculer pour chaque élément si distance inférieure à ...
