@@ -59,7 +59,11 @@
       <a-sky color="#ECECEC"></a-sky>
       
       <a-entity id="camera" position="-0.45475 0.7 -0.375" camera="fov: 50; near: 0.001" look-controls="pointerLockEnabled: true" wasd-controls="fly: true; acceleration: 95" rotation="">
-        <a-entity cursor="fuse: true; fuseTimeout: 500" position="0 0 -0.5" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="color: black; shader: flat" raycaster=""></a-entity>
+        <a-entity cursor="fuse: true; fuseTimeout: 500" position="0 0 -0.5" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="color: black; shader: flat" raycaster=""
+        animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 150; from: 0.01 0.01 0.01; to: 0.2 0.2 0.2"
+        animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1500; from: 0.2 0.2 0.2; to: 0.01 0.01 0.01"
+        animation__mouseleave="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500; to: 0.2 0.2 0.2">
+        ></a-entity>
         <a-text id="HUD_texte" font="mozillavr" value="X/10 etudiants d'Estienne" color="#ff0000" position="0.176 0.19409 -0.48689" scale="0.1 0.1 0.1" text=""></a-text>
         <a-entity id="plane_fov" visible="false" geometry="primitive: plane" position="0 0 -0.5" scale="0.97961 0.46268 0.61225"></a-entity>
       </a-entity>
