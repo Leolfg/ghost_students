@@ -11,13 +11,13 @@
         this.studentlist = sceneEl.querySelectorAll('.student');
         console.log(this.studentlist);
 
-        this.studentposition = this.studentlist.object3D.position;
-        console.log(this.studentposition);
+        for (let i = 0; i < this.studentposition.length; i++) {
+        let studentPos = this.studentlist[i].object3D.position
+        console.log(this.studentlist[i].id +" position is" + studentPos);
 
-        //for (let i = 0; i < this.studentposition.length; i++) {
-        //let studentPos = this.studentlist[i].object3D.position
-        //console.log(this.studentlist[i].id +" position is" + studentPos);
-        //}
+        //this.studentposition = this.studentlist.object3D.position;
+        //console.log(this.studentposition);
+        }
       },
 
       /*tick: function() {
