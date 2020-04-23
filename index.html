@@ -10,13 +10,19 @@
         this.cam = document.querySelector('#camera') //grab camera
         console.log(this.cam);
 
-        let studentPos = this.el.object3D.position //get student pos (not working rn because no type specified)
-        console.log('inital student position is ' + studentPos);
+        let start_studentPos = this.el.object3D.position //get student pos (not working rn because no type specified)
+        console.log('inital student position is ' + start_studentPos);
         },
 
       tick: function() {
-
-
+        let studentPos = this.el.object3D.position
+        let camPos = this.cam.object3D.position
+          let distance = camPos.distanceTo(studentPos)
+            console.log('You are ' + distance + 'away from ' + this.el.id);
+            if (distance < 0.5) {
+              //do something
+            }
+          }
       }
 
     });
