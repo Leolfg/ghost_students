@@ -3,26 +3,6 @@
     <script src="js/aframe.min.js"></script>
     <script src="js/aframe-extras.min.js"></script>
 
-<script>
-    AFRAME.registerComponent('student-distance', {
-
-      init: function () {
-        this.cam = document.querySelector('#camera') //grab camera
-        console.log(this.cam);
-        },
-
-      tick: function() {
-        let studentPos = this.el.object3D.position
-        let camPos = this.cam.object3D.position
-          let distance = camPos.distanceTo(studentPos)
-            console.log('You are ' + distance + 'away from ' + this.el.id);
-            if (distance < 0.5) {
-              //do something
-            }
-          }
-    });
-</script>
-
   </head>
   <body>
     <a-scene color-space="sRGB" renderer="colorManagement: true;">
@@ -41,7 +21,7 @@
 
       <a-entity gltf-model="#estienne" position="-33.404 4.130 -23.70" scale="12 12 12"></a-entity>
 
-      <a-entity id="eleve_1" student-distance class="" gltf-model="#leo" scale="17 17 17" position="-1.7 0 -3.3" rotation=""
+      <a-entity id="eleve_1" cursor-listener class="" gltf-model="#leo" scale="17 17 17" position="-1.7 0 -3.3" rotation=""
       animation-mixer="clip: ANIM_1" sound="src:#miroir; on: click"></a-entity>
 
       <a-entity id="eleve_1bis" class="" gltf-model="#alice" scale="2.5 2.5 2.5" position="-4.32 0 -12.4" rotation=""
@@ -76,7 +56,11 @@
       <a-sky color="#ECECEC"></a-sky>
       
       <a-entity id="camera" position="-1.5 0.7 -0.375" camera="fov: 50; near: 0.001" look-controls="pointerLockEnabled: true" wasd-controls="fly: true; acceleration:95">
-        <a-entity cursor position="-1.5 0.7 -5.375"></a-entity>
+        <a-entity cursor="fuse: true; fuseTimeout: 500"
+        position="-1.5 0.7 -1.375"
+        geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+        material="color: black; shader: flat">
+        </a-entity>
       </a-entity>
  
     </a-scene>
