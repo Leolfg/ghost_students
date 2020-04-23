@@ -5,7 +5,6 @@
 
 <script>
     AFRAME.registerComponent('student-distance', {
-      schema: {type: 'string'},
 
       init: function () {
         let sceneEl = document.querySelector('a-scene');
@@ -14,7 +13,7 @@
 
         for (let i = 0; i < this.studentlist.length; i++) {
             var studentPos = this.studentlist[i].object3D.position
-            console.log((this.studentlist[i].id) + ' position is ' + (studentPos.value));
+            console.log(this.studentlist[i].id + ' position is ' + studentPos.position);
 
         //a tester
         //let (this.studentlist[i].id + "_position") = studentpos;
