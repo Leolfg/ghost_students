@@ -23,14 +23,14 @@
 
       <a-entity id="box" cursor-listener geometry="primitive: box" material="color: blue" sound="src:#miroir; on: click"></a-entity>
 
-      <a-entity id="eleve_1" cursor-listener gltf-model="#leo" scale="17 17 17" position="-1.7 0 -3.3" rotation=""
-      animation-mixer="clip: ANIM_1" sound="src:#miroir; on: click"></a-entity>
+      <a-entity id="eleve_1" gltf-model="#leo" scale="17 17 17" position="-1.7 0 -3.3" rotation=""
+      animation-mixer="clip: ANIM_1" cursor-listener sound="src:#miroir; on: click"></a-entity>
 
       <a-entity id="eleve_1bis" class="" gltf-model="#alice" scale="2.5 2.5 2.5" position="-4.32 0 -12.4" rotation=""
-      animation-mixer="clip: ANIM_1" sound="src:#miroir; on: click"></a-entity>
+      animation-mixer="clip: ANIM_1" cursor-listener sound="src:#miroir; on: click"></a-entity>
 
       <a-entity id="eleve_2" class="" gltf-model="#felix" scale="17 17 17" position="-6.19713 5.73006 10.70071" rotation=""
-      animation-mixer="clip: ANIM_1" sound="src:#miroir; on: click"></a-entity>
+      animation-mixer="clip: ANIM_1" cursor-listener sound="src:#miroir; on: click"></a-entity>
 
       <a-entity id="eleve_3" class="" gltf-model="#tine_sit" scale="19 19 19" position="-19 8.5 3.4" rotation="0 60 0"
       animation-mixer="clip: SIT" sound="src:#miroir; on: click"></a-entity>
@@ -61,8 +61,7 @@
         <a-entity cursor="fuse: true; fuseTimeout: 500"
         position="0 0 -0.5"
         geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
-        material="color: black; shader: flat"
-        raycaster="objects: cursor-listener">
+        material="color: black; shader: flat">
         </a-entity>
       </a-entity>
  
