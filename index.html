@@ -7,13 +7,13 @@
     AFRAME.registerComponent('student-distance', {
 
       init: function () {
-        var sceneEl = document.querySelector('a-scene');
+        let sceneEl = document.querySelector('a-scene');
         this.studentlist = sceneEl.querySelectorAll('.student');
         console.log(this.studentlist);
 
-        for (var i = 0; i < this.studentlist.length; i++) {
-        var studentPos = this.studentlist[i].object3D.position
-        console.log(this.studentlist[i].id + " position is" + this.studentlist[i].object3D.position);
+        for (let i = 0; i < this.studentlist.length; i++) {
+        let studentPos = this.studentlist[i].object3D.position
+        console.log(this.studentlist[i].id + ' position is' + studentPos);
 
         //a tester
         //let (this.studentlist[i].id + "_position") = studentpos;
