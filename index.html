@@ -7,13 +7,17 @@
     AFRAME.registerComponent('student-distance', {
 
       init: function () {
-        let sceneEl = document.querySelector('a-scene')
-        let studentPos = this.el.object3D.position
+        this.cam = document.querySelector('#camera') //grab camera
+        console.log(this.cam);
+
+        let studentPos = this.el.object3D.position //get student pos (not working rn because no type specified)
         console.log('inital student position is ' + studentPos);
         },
 
       tick: function() {
-       
+
+            }
+          }
       }
 
     });
