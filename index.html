@@ -7,26 +7,18 @@
     AFRAME.registerComponent('student-distance', {
 
       init: function () {
-        let sceneEl = document.querySelector('a-scene');
-        this.studentlist = sceneEl.querySelectorAll('.student');
-        console.log(this.studentlist);
+        let sceneEl = document.querySelector('a-scene')
+        let studentPos = this.el.object3D.position
+        console.log('inital student position is ' + studentPos);
         },
 
       tick: function() {
-        let camPos = this.el.object3D.position 
-          for (let i = 0; i < this.studentlist.length; i++) {
-            let studentPos = this.studentlist[i].object3D.position
-            let distance = camPos.distanceTo(studentPos)
-            console.log('You are ' + distance + 'away from ' + this.studentlist[i].id);
-            if (distance < 0.5) {
-              //do something
-            }
-          }
+       
       }
 
     });
-    
 </script>
+
   </head>
   <body>
     <a-scene color-space="sRGB" renderer="colorManagement: true;">
@@ -42,42 +34,42 @@
 
       <a-entity gltf-model="#estienne" position="-33.404 4.130 -23.70" scale="12 12 12"></a-entity>
 
-      <a-entity id="eleve_1" class="student" gltf-model="#leo" scale="17 17 17" position="-1.7 0 -3.3" rotation=""
+      <a-entity id="eleve_1" student-distance class="" gltf-model="#leo" scale="17 17 17" position="-1.7 0 -3.3" rotation=""
       animation-mixer="clip: ANIM_1"></a-entity>
 
-      <a-entity id="eleve_1bis" class="student" gltf-model="#alice" scale="2.5 2.5 2.5" position="-3 0 -3.3" rotation=""
+      <a-entity id="eleve_1bis" class="" gltf-model="#alice" scale="2.5 2.5 2.5" position="-3 0 -3.3" rotation=""
       animation-mixer="clip: ANIM_1"></a-entity>
 
-      <a-entity id="eleve_2" class="student" gltf-model="#felix" scale="17 17 17" position="-6.19713 5.73006 10.70071" rotation=""
+      <a-entity id="eleve_2" class="" gltf-model="#felix" scale="17 17 17" position="-6.19713 5.73006 10.70071" rotation=""
       animation-mixer="clip: ANIM_1"></a-entity>
 
-      <a-entity id="eleve_3" class="student" gltf-model="#tine_sit" scale="19 19 19" position="-19 8.5 3.4" rotation="0 60 0"
+      <a-entity id="eleve_3" class="" gltf-model="#tine_sit" scale="19 19 19" position="-19 8.5 3.4" rotation="0 60 0"
       animation-mixer="clip: SIT"></a-entity>
 
-      <a-entity id="eleve_4" class="student" gltf-model="#felix" scale="17 17 17" position="-19.16208 -1.29211 9.72338" rotation=""
+      <a-entity id="eleve_4" class="" gltf-model="#felix" scale="17 17 17" position="-19.16208 -1.29211 9.72338" rotation=""
       animation-mixer="clip: ANIM_1"></a-entity>
 
-      <a-entity id="eleve_5" class="student" gltf-model="#felix" scale="17 17 17" position="-14.28574 1.99906 15.69688" rotation=""
+      <a-entity id="eleve_5" class="" gltf-model="#felix" scale="17 17 17" position="-14.28574 1.99906 15.69688" rotation=""
       animation-mixer="clip: ANIM_1"></a-entity>
 
-      <a-entity id="eleve_6" class="student" gltf-model="#felix" scale="17 17 17" position="-5.72249 1.54552 29.02508" rotation=""
+      <a-entity id="eleve_6" class="" gltf-model="#felix" scale="17 17 17" position="-5.72249 1.54552 29.02508" rotation=""
       animation-mixer="clip: ANIM_1"></a-entity>
 
-      <a-entity id="eleve_7" class="student" gltf-model="#leo" scale="17 17 17" position="0.50719 -0.1118 19.52485" rotation=""
+      <a-entity id="eleve_7" class="" gltf-model="#leo" scale="17 17 17" position="0.50719 -0.1118 19.52485" rotation=""
       animation-mixer="clip: ANIM_1"></a-entity>
 
-			<a-entity id="eleve_7.5" class="student" gltf-model="#tine_dance" scale="17 17 17" position="5 5 5" rotation="0 0 0"
+			<a-entity id="eleve_7.5" class="" gltf-model="#tine_dance" scale="17 17 17" position="5 5 5" rotation="0 0 0"
       animation-mixer="clip: DANCE"></a-entity>
       
       <a-entity id="nul_tine_swim" position ="-10.8 9.5 11.025" scale="1 1 1" animation__1="property: rotation; from: 0 0 0; to: 0 -360 0; dur: 15000; loop: true; dir: normal; easing: linear">
-        <a-entity id="eleve_8" class="student" gltf-model="#tine_swim" scale="17 17 17" position="3.5 0 0" rotation="25 0 0"
+        <a-entity id="eleve_8" class="" gltf-model="#tine_swim" scale="17 17 17" position="3.5 0 0" rotation="25 0 0"
         animation-mixer="clip: SWIM"></a-entity>
       </a-entity>>
 
       <a-sky color="#ECECEC"></a-sky>
       
       <a-entity id="camera_rig" position="2.5 0.8 -8" rotation="-1 -212 0">
-      <a-entity student-distance camera="fov: 50" look-controls="pointerLockEnabled: true" wasd-controls="fly: true; acceleration:95"></a-entity>
+      <a-entity id="camera" camera="fov: 50" look-controls="pointerLockEnabled: true" wasd-controls="fly: true; acceleration:95"></a-entity>
       </a-entity>
     </a-scene>
   </body>
