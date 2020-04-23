@@ -11,12 +11,13 @@
         this.studentlist = sceneEl.querySelectorAll('.student');
         console.log(this.studentlist);
 
-        for (let i = 0; i < this.studentlist.length; i++) {
+        for (var i = 0; i < this.studentlist.length; i++) {
         var studentPos = this.studentlist[i].object3D.position
-        console.log(this.studentlist[i].id + " position is" + studentPos);
+        console.log(this.studentlist[i].id + " position is" + this.studentlist[i].object3D.position);
 
-        let (this.studentlist[i].id + "_position") = studentpos;
-        console.log(this.studentlist[i].id + "_position");
+        //a tester
+        //let (this.studentlist[i].id + "_position") = studentpos;
+        //console.log(this.studentlist[i].id + "_position");
 
         //this.studentposition = this.studentlist.object3D.position;
         //console.log(this.studentposition);
