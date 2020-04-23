@@ -7,10 +7,9 @@
   <body>
     <a-scene color-space="sRGB" renderer="colorManagement: true;">
         <a-assets timeout="">
-          
-          <audio id="miroir" src="audio/miroir.mp3"></audio>
 
-            <a-asset-item id="estienne" src="models/estienne/Estienne3.gltf"></a-asset-item>
+          <audio id="miroir" src="audio/miroir.mp3"></audio> <!-- Put the sounds first, so they load first and don't crash/whatever-->
+
             <a-asset-item id="leo" src="models/characters/leo/leo_samba_rouge.gltf"></a-asset-item>
             <a-asset-item id="felix" src="models/characters/felix/felix_rouge.gltf"></a-asset-item>
             <a-asset-item id="tine_swim" src="models/characters/tine/tine_swim_rouge.gltf"></a-asset-item>
@@ -18,6 +17,7 @@
             <a-asset-item id="tine_sit" src="models/characters/tine/tine_site.gltf"></a-asset-item> 
             <a-asset-item id="alice" src="models/characters/alice/alice_anim_rouge.gltf"></a-asset-item>
 
+            <a-asset-item id="estienne" src="models/estienne/Estienne3.gltf"></a-asset-item>
 
         </a-assets>
 
