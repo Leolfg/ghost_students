@@ -2,35 +2,27 @@
   <head>
     <script src="js/aframe.min.js"></script>
     <script src="js/aframe-extras.min.js"></script>
-
 <script>
     AFRAME.registerComponent('foo', {
       init: function () {
-        this.studentlist = document.querySelectorAll('.student'); //chercher les élèves, lister dans studentlist
-        console.log(this.studentlist);
-        
-        //var sceneEl = document.querySelector('a-scene'); //pointer vers la scène
-        //this.entities = sceneEl.querySelectorAll('.student'); //créer une liste des éléments avec .student, utilisée dans le tick
-        //console.log(entities[i]); //chaque élément dans console
-      },
+        var sceneEl = document.querySelector('a-scene');
+        this.studentlist = sceneEl.querySelectorAll('.student');
 
+      },
       tick: function() {
-        let camPos = this.el.object3D.position //obtenir position camera/player. Marche parce que script appelé depuis a-entity camera.
-          for (let i = 0; i < this.studentlist.length; i++) { //on passe dans le tableau des élèves
+        let camPos = this.el.object3D.position
+          for (var i = 0; i < this.studentlist.length; i++) { 
+            //console.log(this.studentlist[i]);
             let studentPos = this.studentlist[i].object3D.position
-            //console.log(studentPos + camPos);
             let distance = camPos.distanceTo(studentPos)
-              if (distance < 1) {
-              console.log('You are ' + distance + 'units away from ' + this.studentlist[i].id);
-              //this.studentlist[i].components.sound.playSound();
+              if (distance < 0.5) {
+              console.log('You are ' + distance + 'away from ' + this.studentlist[i].id);
               }
           }
-        
       }
     });
     
 </script>
-
   </head>
   <body>
     <a-scene color-space="sRGB" renderer="colorManagement: true;">
