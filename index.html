@@ -8,6 +8,7 @@
       init: function () {
         var sceneEl = document.querySelector('a-scene'); //pointer vers la scène
         this.studentlist = sceneEl.querySelectorAll('.student'); //chercher les élèves, lister dans els
+        console.log(this.studentlist[i]);
 
         //var sceneEl = document.querySelector('a-scene'); //pointer vers la scène
         //this.entities = sceneEl.querySelectorAll('.student'); //créer une liste des éléments avec .student, utilisée dans le tick
@@ -17,7 +18,6 @@
       tick: function() {
         let camPos = this.el.object3D.position //obtenir position camera/player. Marche parce que script appelé depuis a-entity camera.
           for (var i = 0; i < this.studentlist.length; i++) { //on passe dans le tableau des élèves
-            console.log(this.studentlist[i]);
 
             let studentPos = this.studentlist[i].object3D.position
             let distance = camPos.distanceTo(studentPos)
