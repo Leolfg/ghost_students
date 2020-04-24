@@ -12,6 +12,11 @@ AFRAME.registerComponent('student-manager',
 
     function test_click(){
     console.log('shit got clicked');
+
+        var score_text = document.getElementById("score_text")
+        var score_text_value = score_text.getAttribute('value');
+        score_text.setAttribute("value", (score_text_value) + (-1))
+        console.log('shit got -1');
     }
 
     /*function setTriggerFalse(){
