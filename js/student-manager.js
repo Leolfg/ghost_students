@@ -17,7 +17,7 @@ AFRAME.registerComponent('student-manager',
         score_text.setAttribute("value", (score_text_value -1))
         }
 
-        //var studenttrigger = this.el;
+        var studenttrigger = this.el;
         console.log(studentrigger)
         var student_name = studenttrigger.id.replace('trigger_','')
         var student =  document.getElementById(student_name)
