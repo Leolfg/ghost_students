@@ -3,9 +3,6 @@ AFRAME.registerComponent('student-manager',
 {
     init: function( )
     {
-        var score_text = document.getElementById("score_text")
-        score_text.setAttribute("value", "10/10 etudiants d'Estienne")
-
         var studenttriger = this.el;
         studenttriger.addEventListener('click', function( evt ){test_click()})
         
@@ -17,10 +14,8 @@ AFRAME.registerComponent('student-manager',
     console.log('shit got clicked');
 
         var score_text = document.getElementById("score_text")
-        var score_text_value = 10
-        
-        score_text.setAttribute("value", (score_text_value -1)+("/10 etudiants d'Estienne"))
-        
+        var score_text_value = score_text.getAttribute('value');
+        score_text.setAttribute("value", (score_text_value-1))
         console.log('shit got -1');
     }
 
