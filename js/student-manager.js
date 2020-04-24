@@ -7,7 +7,7 @@ AFRAME.registerComponent('student-manager',
     }
     });
 
-    function setTriggerFalse(){
+    /*function setTriggerFalse(){
 
         var score_text = document.getElementById("score_text")
         var score_text_value = score_text.getAttribute('value');
@@ -28,3 +28,4 @@ AFRAME.registerComponent('student-manager',
         score_text.setAttribute("value", (score_text_value) + (-1))
         }
 
+*/
