@@ -24,7 +24,8 @@ AFRAME.registerComponent('student-manager',
         if (score_text_value > -1){
         score_text.setAttribute("value", (score_text_value -1))
         }
-
+        
+        console.log(this.studenttrigger_test)
         var test_2 = test;
         test_2();
 
