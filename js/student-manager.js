@@ -4,11 +4,11 @@ AFRAME.registerComponent('student-manager',
     init: function( )
     {
         var studenttrigger = this.el;
-        studenttrigger.addEventListener('click', function( evt ){test_click()})
+        studenttrigger.addEventListener('click', function( evt ){test_click(studenttrigger)})
     }
     });
 
-    function test_click(){
+    function test_click(studenttrigger){
 
         var score_text = document.getElementById("score_text")
         var score_text_value = score_text.getAttribute('value');
@@ -17,7 +17,6 @@ AFRAME.registerComponent('student-manager',
         score_text.setAttribute("value", (score_text_value -1))
         }
 
-        var studenttrigger = this.el;
         console.log(studentrigger)
         var student_name = studenttrigger.id.replace('trigger_','')
         var student =  document.getElementById(student_name)
