@@ -4,7 +4,7 @@ AFRAME.registerComponent('student-manager',
     init: function( )
     {
         var studenttriger = this.el;
-        studenttriger.addEventListener('click', test_click())
+        studenttriger.addEventListener('click', function( evt ){test_click()})
         
         //this.el.addEventListener('click', function( evt ){setTriggerFalse(); console.log(this.el.id + ' got clicked'); });
     }
