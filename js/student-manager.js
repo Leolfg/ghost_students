@@ -3,7 +3,8 @@ AFRAME.registerComponent('student-manager',
 {
     init: function( )
     {
-        this.el.addEventListener('click', console.log(this.el.id + ' got clicked'));
+        this.el.addEventListener('click', function( evt ) { console.log(this.el.id + ' got clicked'); });
+        
         //this.el.addEventListener('click', function( evt ){setTriggerFalse(); console.log(this.el.id + ' got clicked'); });
     }
     });
