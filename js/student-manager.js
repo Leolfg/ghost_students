@@ -15,8 +15,10 @@ AFRAME.registerComponent('student-manager',
 
         var score_text = document.getElementById("score_text")
         var score_text_value = score_text.getAttribute('value');
+        if (score_text_value < -1){
         score_text.setAttribute("value", (score_text_value-1))
         console.log('shit got -1');
+        }
     }
 
     /*function setTriggerFalse(){
