@@ -5,20 +5,30 @@ AFRAME.registerComponent('student-manager',
     {
         var studenttriger = this.el;
         studenttriger.addEventListener('click', function( evt ){test_click()})
-        
-        //this.el.addEventListener('click', function( evt ){setTriggerFalse(); console.log(this.el.id + ' got clicked'); });
     }
     });
 
     function test_click(){
-    console.log('shit got clicked');
+    console.log('trigger clicked');
 
         var score_text = document.getElementById("score_text")
         var score_text_value = score_text.getAttribute('value');
+
         if (score_text_value > -1){
-        score_text.setAttribute("value", (score_text_value -3))
-        console.log('shit got -1');
+        score_text.setAttribute("value", (score_text_value -1))
         }
+
+        var student_name = studenttriger.id.replace('trigger_','');
+        var student =  document.getElementById(student_name)
+        console.log('the student clicked is ' + student_name + ' or ' + student)
+
+        /*student.setAttribute("visible", "false");
+        studenttrigger.setAttribute("class", "activated_student_trigger");
+        studenttrigger.setAttribute("visible", "false"); 
+        
+        console.log('student+studenttrigger deactivated');*/
+
+
     }
 
     /*function setTriggerFalse(){
