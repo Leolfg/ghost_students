@@ -16,4 +16,10 @@ AFRAME.registerComponent('student-manager',
         if (score_text_value > -1){
         score_text.setAttribute("value", (score_text_value -1))
         }
+
+        if(score_text_value = 0){
+            //take player to a position
+            //make camille scalabre appear + animation
+            //petit texte "Tu as trouvé tous les étudiants de l'école Estienne"
+        }
 }
