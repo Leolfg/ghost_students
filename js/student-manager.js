@@ -3,11 +3,16 @@ AFRAME.registerComponent('student-manager',
 {
     init: function( )
     {
-        this.el.addEventListener('click', function( evt ) { console.log(this.el.id + ' got clicked'); });
+        var studenttriger = this.el;
+        studenttriger.addEventListener('click', test_click())
         
         //this.el.addEventListener('click', function( evt ){setTriggerFalse(); console.log(this.el.id + ' got clicked'); });
     }
     });
+
+    function test_click(){
+    console.log('shit got clicked');
+    }
 
     /*function setTriggerFalse(){
 
