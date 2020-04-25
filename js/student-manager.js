@@ -26,8 +26,8 @@ AFRAME.registerComponent('student-manager',
         if  (score_text_value == 0){
             score_text.setAttribute("visible", "false");
             document.getElementById("etudiants_text").setAttribute("visible", "false");
-            document.getElementById("camera").setAttribute("position", "6 8 30");
             document.getElementById("camera_rig").setAttribute("rotation","-25 -175 0");
+            document.getElementById("camera").setAttribute("position", "6 8 30");
 
             console.log("the score is 0, player tped")
                         //take player to a position
