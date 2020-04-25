@@ -41,8 +41,8 @@
 
       <a-entity id="student_1" gltf-model="#leo" scale="17 17 17" position="-1.7 0 -3.3" rotation="" animation-mixer="clip: ANIM_1"></a-entity>
       <a-entity id="trigger_student_1" student-manager class="student_trigger" geometry="" material="color: blue; opacity: 0" position="-1.7 0.63251 -3.3" scale="" sound="src:#audio_student_1; on: click"
-      event-set__hidetrigger1="_event: click; _delay : 1000; visible: false; class: activated_student_trigger"
-			event-set__hidestudent1="_event: click; _target: #student_1; visible: false;"
+      event-set__hidetrigger1="_event: click; visible: false; class: activated_student_trigger"
+			event-set__hidestudent1="_event: click; _delay : 2500; _target: #student_1; visible: false;"
       ></a-entity>
       
       <a-entity id="student_2" class="" gltf-model="models/characters/alice/alice_anim_rouge.gltf" scale="2.5 2.5 2.5" position="6.9 0.44 -15.69" rotation="" animation-mixer="clip: ANIM_1"></a-entity>
