@@ -92,7 +92,7 @@
       <a-sky color="#ECECEC"></a-sky>
 
       <a-entity id="camera_rig" position="2.5 0.8 -8" rotation="-1 -212 0">
-        <a-entity id="camera" position="" camera="fov: 50; near: 0.001" look-controls="pointerLockEnabled: true" wasd-controls="fly: true; acceleration: 95" rotation="">
+        <a-entity id="camera" position="" camera="active : true; fov: 50; near: 0.001" look-controls="pointerLockEnabled: true" wasd-controls="fly: true; acceleration: 95" rotation="">
           <a-entity cursor="fuse: true; fuseTimeout: 500" position="0 0 -0.5" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="color: black; shader: flat" raycaster="objects: .student_trigger"
           animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 150; from: 0.1 0.1 0.1; to: 1 1 1"
           animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1500; from: 1 1 1; to: 0.1 0.1 0.1"
@@ -103,7 +103,7 @@
         </a-entity>
       </a-entity>
 
-      <a-entity id="camera_2" position="" rotation="" camera="active: false; fov: 50; near: 0.001" look-controls="pointerLockEnabled: true" wasd-controls="fly: true; acceleration: 95" ></a-entity>
+      <a-entity id="camera_2" position="0 20.81 -33.45" rotation="-20 155 0" camera="active: false; fov: 50; near: 0.001" look-controls="pointerLockEnabled: true" wasd-controls="fly: true; acceleration: 95" ></a-entity>
  
     </a-scene>
   </body>
