@@ -27,7 +27,6 @@ AFRAME.registerComponent('student-manager',
         if  (score_text_value == 0){
             score_text.setAttribute("visible", "false");
             document.getElementById("etudiants_text").setAttribute("visible", "false");
-            document.getElementById("estienne").setAttribute("visible", "true");
 
             camera_2.setAttribute('camera', 'active', true)
         }
