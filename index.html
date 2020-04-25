@@ -113,9 +113,9 @@
               animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 500; from: 0.1 0.1 0.1; to: 1 1 1"
               animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1500; from: 1 1 1; to: 0.1 0.1 0.1"
               animation__mouseleave="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500; to: 1 1 1"
-              animation__mouseleavecolor="property: material.color; startEvents: mouseleave; dur: 1; to: black;"
-              animation__mouseentercolor="property: material.color; startEvents: mouseenter; dur: 1; to: red;"
-              animation__clickcolor="property: material.color; startEvents: click; dur: 1; to: black;"
+              animation__mouseleavecolor="property: material.color; startEvents: mouseleave; dur: 1; from: red; to: black;"
+              animation__mouseentercolor="property: material.color; startEvents: mouseenter; dur: 1; from: black; to: red;"
+              animation__clickcolor="property: material.color; startEvents: click; dur: 1; from: red; to: black;"
               ></a-entity>
 
                   <a-text id="score_text" score-init="" font="mozillavr" value="10" color="#ff0000" position="0.1717 0.19409 -0.48689" scale="0.1 0.1 0.1" text="align: right"></a-text>
