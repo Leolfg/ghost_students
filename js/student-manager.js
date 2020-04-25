@@ -30,7 +30,7 @@ AFRAME.registerComponent('student-manager',
             document.getElementById("etudiants_text").setAttribute("visible", "false");
 
             camera_2.setAttribute('camera', 'active', true)
-            camera.setAttribute('camera', 'active', false)
+            //camera.setAttribute('camera', 'active', false)
             camera.setAttribute('visible', 'false')
 
             //take player to a position

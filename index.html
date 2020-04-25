@@ -92,18 +92,18 @@
       <a-sky color="#ECECEC"></a-sky>
 
       <a-entity id="camera_rig" position="2.5 0.8 -8" rotation="-1 -212 0">
-        <a-entity id="camera" position="" camera="active : true; fov: 50; near: 0.001" look-controls="pointerLockEnabled: true" wasd-controls="fly: true; acceleration: 95" rotation="">
-          <a-entity cursor="fuse: true; fuseTimeout: 500" position="0 0 -0.5" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="color: black; shader: flat" raycaster="objects: .student_trigger"
-          animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 150; from: 0.1 0.1 0.1; to: 1 1 1"
-          animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1500; from: 1 1 1; to: 0.1 0.1 0.1"
-          animation__mouseleave="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500; to: 1 1 1"></a-entity>
-          <a-text id="score_text" score-init="" font="mozillavr" value="10" color="#ff0000" position="0.1717 0.19409 -0.48689" scale="0.1 0.1 0.1" text="align: right"></a-text>
-          <a-text id="etudiants_text" font="mozillavr" value="  /10 etudiants d'Estienne" color="#ff0000" position="0.176 0.19409 -0.48689" scale="0.1 0.1 0.1" text=""></a-text>
+        <a-entity id="camera" position="" camera="active : false; fov: 50; near: 0.001" look-controls="pointerLockEnabled: true" wasd-controls="fly: true; acceleration: 95" rotation="">
+              <a-entity cursor="fuse: true; fuseTimeout: 500" position="0 0 -0.5" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="color: black; shader: flat" raycaster="objects: .student_trigger"
+              animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 150; from: 0.1 0.1 0.1; to: 1 1 1"
+              animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1500; from: 1 1 1; to: 0.1 0.1 0.1"
+              animation__mouseleave="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500; to: 1 1 1"></a-entity>
+                  <a-text id="score_text" score-init="" font="mozillavr" value="10" color="#ff0000" position="0.1717 0.19409 -0.48689" scale="0.1 0.1 0.1" text="align: right"></a-text>
+                  <a-text id="etudiants_text" font="mozillavr" value="  /10 etudiants d'Estienne" color="#ff0000" position="0.176 0.19409 -0.48689" scale="0.1 0.1 0.1" text=""></a-text>
           <a-entity id="plane_fov" visible="false" geometry="primitive: plane" position="0 0 -0.5" scale="0.97961 0.46268 0.61225"></a-entity>
         </a-entity>
       </a-entity>
 
-      <a-entity id="camera_2" position="0 20.81 -33.45" rotation="-23.6 -197 0" camera="active: false; fov: 50; near: 0.001" look-controls="pointerLockEnabled: true" wasd-controls="fly: true; acceleration: 95">
+      <a-entity id="camera_2" position="0 20.81 -33.45" rotation="-23.6 -197 0" camera="active: true; fov: 50; near: 0.001" look-controls="pointerLockEnabled: true" wasd-controls="fly: true; acceleration: 95">
         <a-text id="ending_text" font="mozillavr" color="#ff0000" position="0.00789 -0.13269 -0.48704" scale="0.1 0.1 0.1" value="Bravo ! Vous avez trouve tous les etudiants. Vous voila admis en DSAA ! Felicitations.        Et non, il n'y a effectivement pas d'accents                            sur cette police de caracteres.; align: center"></a-text>
         <a-entity id="plane_fov_2" visible="false" geometry="primitive: plane" position="0 0 -0.5" scale="0.97961 0.46268 0.61225"></a-entity>
       </a-entity>
