@@ -20,6 +20,9 @@ AFRAME.registerComponent('student-manager',
 
         
     function check_score(){
+        var score_text = document.getElementById("score_text")
+        var score_text_value = score_text.getAttribute('value');
+        
         if  (score_text_value = 0){
             document.getElementById("camera").setAttribute("position", "10 10 10");
             console.log("the score is 0, player tped")
