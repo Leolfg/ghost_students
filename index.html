@@ -39,14 +39,14 @@
 
       <a-entity id="estienne" gltf-model="#estienne" visible="true" position="-33.404 4.130 -23.70" scale="12 12 12"></a-entity>
 
-      <a-entity id="student_1" gltf-model="#leo" scale="17 17 17" position="-1.7 0 -3.3" rotation="" animation-mixer="clip: ANIM_1"
-      animation__studentfadout="property: material.opacity; startEvents: hidetrigger1; dur: 2000; from: 1; to: 0"
-      ></a-entity>
-              <!-- Ce serait bien un fondu de disparition plutôt que juste visible:false. Du coup au clic du trigger faut lancer l'animation là-->
+      <a-entity id="student_1" gltf-model="#leo" scale="17 17 17" position="-1.7 0 -3.3" rotation="" animation-mixer="clip: ANIM_1"></a-entity>
+              <!-- Ce serait bien un fondu de disparition plutôt que juste visible:false. Du coup au clic du trigger faut lancer l'animation là
+              animation__studentfadout="property: material.opacity; startEvents: nomevenementtrigger; dur: 2000; from: 1; to: 0"
+              Faut faire un shader/material custom pour pouvoir faire ça, voir marque-page-->
 
       <a-entity id="trigger_student_1" student-manager class="student_trigger" geometry="" material="color: blue; opacity: 0" position="-1.7 0.63251 -3.3" scale="" sound="src:#audio_student_1; on: click"
       event-set__hidetrigger1="_event: click; visible: false; class: activated_student_trigger"
-			
+			event-set__hidestudent1="_event: click; _delay : 2500; _target: #student_1; visible: false;"
       ></a-entity>
       
       <a-entity id="student_2" class="" gltf-model="models/characters/alice/alice_anim_rouge.gltf" scale="2.5 2.5 2.5" position="6.9 0.44 -15.69" rotation="" animation-mixer="clip: ANIM_1"></a-entity>
@@ -110,11 +110,11 @@
         <a-entity id="camera" position="" camera="active : true; fov: 50; near: 0.001" look-controls="pointerLockEnabled: true" wasd-controls="fly: true; acceleration: 95" rotation="">
               <a-entity id="cursor" cursor="fuse: true; fuseTimeout: 1000" position="0 0 -0.750" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="color: black; shader: flat" raycaster="objects: .student_trigger"
               animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 500; from: 0.1 0.1 0.1; to: 1 1 1"
-              animation__click2="property: material.color; startEvents: click; color: black"
+              animation__click2="property: material.color; startEvents: click; dur: 500; from: red; to: black;"
               animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1500; from: 1 1 1; to: 0.1 0.1 0.1"
-              animation__fusing2="property: material.color; startEvents: fusing; color: red"
+              animation__fusing2="property: material.color; startEvents: fusing; dur: 100; from: black; to: red;"
               animation__mouseleave="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500; to: 1 1 1"
-              animation__mouseleave2="property: material.color; startEvents: mouseleave; color: black"></a-entity>
+              animation__mouseleave2="property: material.color; startEvents: mouseleave; dur: 500; from: red; to: black;"></a-entity>
             <!-- a debug du coup -->
 
                   <a-text id="score_text" score-init="" font="mozillavr" value="10" color="#ff0000" position="0.1717 0.19409 -0.48689" scale="0.1 0.1 0.1" text="align: right"></a-text>
