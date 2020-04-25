@@ -107,7 +107,9 @@
         </a-entity>
       </a-entity>
 
-      <a-plane id="plane_intro" src="#intro" position="1.65  0.744 -6.6" material="shader: flat" geometry="" scale="2.569 1.28 0" rotation="0 150 0"></a-plane>
+      <a-plane id="plane_intro" src="#intro" position="1.65  0.744 -6.6" material="shader: flat" geometry="" scale="2.569 1.28 0" rotation="0 150 0"
+      animation__intro="property: opacity; startEvents: loaded; easing: easeInExpo; dur: 30000; from: 1; to: 0"
+      ></a-plane>
 
       <a-entity id="camera_rig_2" position="0 20.81 -33.45" rotation="-23.6 -197 0">
         <a-entity id="camera_2" position="" rotation="" camera="active: false; fov: 50; near: 0.001">
