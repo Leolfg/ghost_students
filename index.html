@@ -11,10 +11,7 @@
     <a-scene color-space="sRGB" renderer="colorManagement: true;">
       <a-assets timeout="30000">
 
-          !<!--<audio id="miroir" src="audio/miroir.mp3"></audio>--> <!-- Put the sounds first, so they load first and don't crash/whatever
-          <audio id="quack" src="audio/quack.wav"></audio> --><!-- Put the sounds first, so they load first and don't crash/whatever-->
-
-          <a-asset-item id="miroir" response-type="arraybuffer" src="audio/miroir.mp3"></a-asset-item>
+          <a-asset-item id="miroir" response-type="arraybuffer" src="#quack"></a-asset-item>
           <a-asset-item id="quack" response-type="arraybuffer" src="audio/quack.wav"></a-asset-item>
 
             <a-asset-item id="leo" src="models/characters/leo/leo_samba_rouge.gltf"></a-asset-item>
@@ -32,61 +29,61 @@
       <a-entity id="estienne" gltf-model="#estienne" visible="true" position="-33.404 4.130 -23.70" scale="12 12 12"></a-entity>
 
       <a-entity id="student_1" gltf-model="#leo" scale="17 17 17" position="-1.7 0 -3.3" rotation="" animation-mixer="clip: ANIM_1"></a-entity>
-      <a-entity id="trigger_student_1" student-manager class="student_trigger" geometry="" material="color: blue; opacity: 0.25" position="-1.7 0.63251 -3.3" scale="" sound="src:audio/miroir.mp3; on: click"
+      <a-entity id="trigger_student_1" student-manager class="student_trigger" geometry="" material="color: blue; opacity: 0.25" position="-1.7 0.63251 -3.3" scale="" sound="src:#quack; on: click"
       event-set__hidetrigger1="_event: click; visible: false; class: activated_student_trigger"
 			event-set__hidestudent1="_event: click; _target: #student_1; visible: false;"
       ></a-entity>
       
       <a-entity id="student_2" class="" gltf-model="models/characters/alice/alice_anim_rouge.gltf" scale="2.5 2.5 2.5" position="6.9 0.44 -15.69" rotation="" animation-mixer="clip: ANIM_1"></a-entity>
-      <a-entity id="trigger_student_2" student-manager  class="student_trigger" geometry="" material="color: blue; opacity: 0.25" position="7.00936 0.88807 -15.317" scale="1 1 1.8" sound="src: audio/quack.wav; on: click"
+      <a-entity id="trigger_student_2" student-manager  class="student_trigger" geometry="" material="color: blue; opacity: 0.25" position="7.00936 0.88807 -15.317" scale="1 1 1.8" sound="src: #quack; on: click"
       event-set__hidetrigger2="_event: click; visible: false; class: activated_student_trigger"
       event-set__hidestudent2="_event: click; _target: #student_2; visible: false;"
       ></a-entity>
 
       <a-entity id="student_3" class="" gltf-model="#felix" scale="17 17 17" position="-6.19713 5.73006 10.70071" rotation="" animation-mixer="clip: ANIM_1"></a-entity>
-      <a-entity id="trigger_student_3" student-manager class="student_trigger" geometry="" material="color: blue; opacity: 0.25" position="-6.2 6.4 10.7" scale="" sound="src: audio/quack.wav; on: click"
+      <a-entity id="trigger_student_3" student-manager class="student_trigger" geometry="" material="color: blue; opacity: 0.25" position="-6.2 6.4 10.7" scale="" sound="src: #quack; on: click"
       event-set__hidetrigger3="_event: click; visible: false; class: activated_student_trigger"
 			event-set__hidestudent3="_event: click; _target: #student_3; visible: false;"
       ></a-entity>
 
       <a-entity id="student_4" class="" gltf-model="#tine_sit" scale="19 19 19" position="-19 8.5 3.4" rotation="0 60 0" animation-mixer="clip: SIT"></a-entity>
-      <a-entity id="trigger_student_4" student-manager class="student_trigger" geometry="" material="color: blue; opacity: 0.25" position="-18.88351 9.01751 3.49886" scale="0.6 0.6 0.6" sound="src: audio/quack.wav; on: click"
+      <a-entity id="trigger_student_4" student-manager class="student_trigger" geometry="" material="color: blue; opacity: 0.25" position="-18.88351 9.01751 3.49886" scale="0.6 0.6 0.6" sound="src: #quack; on: click"
       event-set__hidetrigger4="_event: click; visible: false; class: activated_student_trigger"
       event-set__hidestudent4="_event: click; _target: #student_4; visible: false;"
       ></a-entity>
 
       <a-entity id="student_5" class="" gltf-model="models/characters/faustine/faustine_anim.gltf" scale="3 3 3" position="-18.04384 -1.9808 36.65401" rotation="10 90 0" animation-mixer="clip: ANIM_1"></a-entity>
-      <a-entity id="trigger_student_5" student-manager class="student_trigger" geometry="" material="color: blue; opacity: 0.25" position="-17.88 -0.62775 36.638" scale="0.8 1.67 0.8" sound="src:audio/miroir.mp3; on: click"
+      <a-entity id="trigger_student_5" student-manager class="student_trigger" geometry="" material="color: blue; opacity: 0.25" position="-17.88 -0.62775 36.638" scale="0.8 1.67 0.8" sound="src:#quack; on: click"
       event-set__hidetrigger5="_event: click; visible: false; class: activated_student_trigger"
 			event-set__hidestudent5="_event: click; _target: #student_5; visible: false;"></a-entity>
 
       <a-entity id="student_6" class="" gltf-model="#leo" scale="17 17 17" position="-15.56323 -1.175 -4.36999" rotation="" animation-mixer="clip: ANIM_1"></a-entity>
-      <a-entity id="trigger_student_6" student-manager class="student_trigger" geometry="" material="color: blue; opacity: 0.25" position="-15.3 -0.45 -4.12" scale="1 1.250 1" sound="src:audio/miroir.mp3; on: click"
+      <a-entity id="trigger_student_6" student-manager class="student_trigger" geometry="" material="color: blue; opacity: 0.25" position="-15.3 -0.45 -4.12" scale="1 1.250 1" sound="src:#quack; on: click"
       event-set__hidetrigger6="_event: click; visible: false; class: activated_student_trigger"
       event-set__hidestudent6="_event: click; _target: #student_6; visible: false;"
       ></a-entity>
 
       <a-entity id="student_7" class="" gltf-model="#felix" scale="17 17 17" position="12.26 -0.66 30.26" rotation="" animation-mixer="clip: ANIM_1"></a-entity>
-      <a-entity id="trigger_student_7" student-manager class="student_trigger" geometry="" material="color: blue; opacity: 0.25" position="12.26 0.055 30.379" scale="1 1.35 1" sound="src: audio/quack.wav; on: click"
+      <a-entity id="trigger_student_7" student-manager class="student_trigger" geometry="" material="color: blue; opacity: 0.25" position="12.26 0.055 30.379" scale="1 1.35 1" sound="src: #quack; on: click"
       event-set__hidetrigger7="_event: click; visible: false; class: activated_student_trigger"
       event-set__hidestudent7="_event: click; _target: #student_7; visible: false;"
       ></a-entity>
 
       <a-entity id="student_8" class="" gltf-model="#alice" scale="2.5 2.5 2.5" position="-8.33834 -4.68163 35.62579" rotation="" animation-mixer="clip: ANIM_1"></a-entity>
-      <a-entity id="trigger_student_8" student-manager="" class="student_trigger" geometry="" material="color: blue; opacity: 0.25" position="-8.52856 -4.15287 36.06388" scale="1.03 1 2" sound="src: audio/miroir.mp3; on: click" event-set__hidetrigger8="[object Object]" event-set__hidestudent8="[object Object]"
+      <a-entity id="trigger_student_8" student-manager="" class="student_trigger" geometry="" material="color: blue; opacity: 0.25" position="-8.52856 -4.15287 36.06388" scale="1.03 1 2" sound="src: #quack; on: click" event-set__hidetrigger8="[object Object]" event-set__hidestudent8="[object Object]"
       event-set__hidetrigger8="_event: click; visible: false; class: activated_student_trigger"
       event-set__hidestudent8="_event: click; _target: #student_8; visible: false;"
       ></a-entity>
 
       <a-entity id="student_9" class="" gltf-model="#tine_dance" scale="17 17 17" position="-13.7 1 21.72" rotation="" animation-mixer="clip: DANCE"></a-entity>
-      <a-entity id="trigger_student_9" student-manager class="student_trigger" geometry="" material="color: blue; opacity: 0.25" position="-13.7 1.536 21.72" scale="" sound="src: audio/quack.wav; on: click"
+      <a-entity id="trigger_student_9" student-manager class="student_trigger" geometry="" material="color: blue; opacity: 0.25" position="-13.7 1.536 21.72" scale="" sound="src: #quack; on: click"
       event-set__hidetrigger9="_event: click; visible: false; class: activated_student_trigger"
       event-set__hidestudent9="_event: click; _target: #student_9; visible: false;"
       ></a-entity>
 
       <a-entity id="nul_tine_swim" position ="-10.8 20 11.025" scale="1 1 1" animation__1="property: rotation; from: 0 0 0; to: 0 -360 0; dur: 20000; loop: true; dir: normal; easing: linear">
         <a-entity id="student_10" class="" gltf-model="#tine_swim" scale="17 17 17" position="10 0 0" rotation="25 0 0" animation-mixer="clip: SWIM"></a-entity>
-        <a-entity id="trigger_student_10" student-manager class="student_trigger" geometry="" material="color: blue; opacity: 0.25" position="9.97665 0.44 0.12072" scale="1 0.5 1" sound="src:audio/miroir.mp3; on: click"
+        <a-entity id="trigger_student_10" student-manager class="student_trigger" geometry="" material="color: blue; opacity: 0.25" position="9.97665 0.44 0.12072" scale="1 0.5 1" sound="src:#quack; on: click"
         event-set__hidetrigger10="_event: click; visible: false; class: activated_student_trigger"
         event-set__hidestudent10="_event: click; _target: #student_10; visible: false;"
         ></a-entity>
