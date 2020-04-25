@@ -18,6 +18,8 @@ AFRAME.registerComponent('student-manager',
         }
 
         if(score_text_value = 0){
+            document.getElementById("camera").setAttribute("position", "10 10 10");
+            console.log("the score is 0, player tped")
             //take player to a position
             //make camille scalabre appear + animation
             //petit texte "Tu as trouvé tous les étudiants de l'école Estienne"
