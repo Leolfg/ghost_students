@@ -106,13 +106,12 @@
         <a-entity id="camera" position="" camera="active : true; fov: 50; near: 0.001" look-controls="pointerLockEnabled: true" wasd-controls="fly: true; acceleration: 95" rotation="">
               <a-entity id="cursor" cursor="fuse: true; fuseTimeout: 1000" position="0 0 -0.750" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="color: black; shader: flat" raycaster="objects: .student_trigger"
               animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 500; from: 0.1 0.1 0.1; to: 1 1 1"
-              animation__click2="property: material.color; color: black"
-
+              animation__click2="property: material.color; startEvents: click; color: black"
               animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1500; from: 1 1 1; to: 0.1 0.1 0.1"
-              animation__fusing2="property: material.color; color: red"
-
+              animation__fusing2="property: material.color; startEvents: fusing; color: red"
               animation__mouseleave="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500; to: 1 1 1"
-              animation__mouseleave2="property: material.color; color: black"></a-entity>
+              animation__mouseleave2="property: material.color; startEvents: mouseleave; color: black"></a-entity>
+
                   <a-text id="score_text" score-init="" font="mozillavr" value="10" color="#ff0000" position="0.1717 0.19409 -0.48689" scale="0.1 0.1 0.1" text="align: right"></a-text>
                   <a-text id="etudiants_text" font="mozillavr" value="  /10 etudiants d'Estienne" color="#ff0000" position="0.176 0.19409 -0.48689" scale="0.1 0.1 0.1" text=""></a-text>
           <a-entity id="plane_fov" visible="false" geometry="primitive: plane" position="0 0 -0.5" scale="0.97961 0.46268 0.61225"></a-entity>
