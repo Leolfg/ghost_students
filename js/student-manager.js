@@ -24,6 +24,8 @@ AFRAME.registerComponent('student-manager',
         var score_text_value = score_text.getAttribute('value');
 
         if  (score_text_value == 0){
+            score_text.setAttribute("visible", "false");
+            document.getElementById("etudiants_text").setAttribute("visible", "false");
             document.getElementById("camera").setAttribute("position", "13.25 11.36 13.9");
             document.getElementById("camera_rig").setAttribute("rotation","-16.7 26.47 0");
 
