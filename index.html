@@ -6,6 +6,27 @@
 
     <script src="js/student-manager.js"></script>
 
+    <script>
+        AFRAME.registerComponent('model-opacity', {
+          schema: {default: 1.0},
+          init: function () {
+            this.el.addEventListener('model-loaded', this.update.bind(this));
+          },
+          update: function () {
+            var mesh = this.el.getObject3D('mesh');
+            var data = this.data;
+            if (!mesh) { return; }
+            mesh.traverse(function (node) {
+              if (node.isMesh) {
+                node.material.opacity = data;
+                node.material.transparent = data < 1.0;
+                node.material.needsUpdate = true;
+              }
+            });
+          }
+        });
+     </script>
+
   </head>
   <body>
     <a-scene color-space="sRGB" renderer="colorManagement: true;">
@@ -39,11 +60,13 @@
 
       <a-entity id="estienne" gltf-model="#estienne" visible="true" position="-33.404 4.130 -23.70" scale="12 12 12"></a-entity>
 
-      <a-entity id="student_1" gltf-model="#leo" scale="17 17 17" position="-1.7 0 -3.3" rotation="" animation-mixer="clip: ANIM_1"></a-entity>
-              <!-- Ce serait bien un fondu de disparition plutôt que juste visible:false. Du coup au clic du trigger faut lancer l'animation là
-              animation__studentfadout="property: material.opacity; startEvents: nomevenementtrigger; dur: 2000; from: 1; to: 0"
-              Faut faire un shader/material custom pour pouvoir faire ça, voir marque-page
-              -->
+      <a-entity id="student_1" gltf-model="#leo" model-opacity="1" scale="17 17 17" position="-1.7 0 -3.3" rotation="" animation-mixer="clip: ANIM_1">
+        <a-animation attribute="model-opacity"
+               dur="10000"
+               from="1"
+               to="0"
+               repeat="indefinite"></a-animation>
+      </a-entity>
 
       <a-entity id="trigger_student_1" student-manager class="student_trigger" geometry="" material="color: blue; opacity: 0" position="-1.7 0.63251 -3.3" scale="" sound="src:#audio_student_1; on: click"
       event-set__hidetrigger1="_event: click; visible: false; class: activated_student_trigger"
