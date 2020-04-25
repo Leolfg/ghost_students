@@ -24,7 +24,9 @@ AFRAME.registerComponent('student-manager',
         var score_text_value = score_text.getAttribute('value');
 
         if  (score_text_value == 0){
-            document.getElementById("camera").setAttribute("position", "13.25 11.36 13.9","rotation","-16.7 26.47 0");
+            document.getElementById("camera").setAttribute("position", "13.25 11.36 13.9");
+            document.getElementById("camera_rig").setAttribute("rotation","-16.7 26.47 0");
+
             console.log("the score is 0, player tped")
                         //take player to a position
             //make camille scalabre appear + animation
