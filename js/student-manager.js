@@ -31,7 +31,8 @@ AFRAME.registerComponent('student-manager',
 
             camera_2.setAttribute('camera', 'active', true)
             camera.setAttribute('camera', 'active', false)
-            
+            camera.setAttribute('visible', 'false')
+
             //take player to a position
             //make camille scalabre appear + animation
             //petit texte "Tu as trouvé tous les étudiants de l'école Estienne"
