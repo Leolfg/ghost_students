@@ -97,8 +97,8 @@
 
       <a-entity id="camera_rig" position="2.5 0.8 -8" rotation="-1 -212 0">
         <a-entity id="camera" position="" camera="active : true; fov: 50; near: 0.001" look-controls="pointerLockEnabled: true" wasd-controls="fly: true; acceleration: 95" rotation="">
-              <a-entity cursor="fuse: true; fuseTimeout: 500" position="0 0 -0.5" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="color: black; shader: flat" raycaster="objects: .student_trigger"
-              animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 150; from: 0.1 0.1 0.1; to: 1 1 1"
+              <a-entity cursor="fuse: true; fuseTimeout: 1000" position="0 0 -0.5" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="color: red; shader: flat" raycaster="objects: .student_trigger"
+              animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 500; from: 0.1 0.1 0.1; to: 1 1 1"
               animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1500; from: 1 1 1; to: 0.1 0.1 0.1"
               animation__mouseleave="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500; to: 1 1 1"></a-entity>
                   <a-text id="score_text" score-init="" font="mozillavr" value="10" color="#ff0000" position="0.1717 0.19409 -0.48689" scale="0.1 0.1 0.1" text="align: right"></a-text>
@@ -107,7 +107,7 @@
         </a-entity>
       </a-entity>
 
-      <a-plane id="plane_intro" src="#intro" position="0 0 0" material="shader: flat" geometry="" scale="2.048 1.024 0"></a-plane>
+      <a-plane id="plane_intro" src="#intro" position="1.65  0.744 -6.6" material="shader: flat" geometry="" scale="2.569 1.28 0" rotation="0 150 0"></a-plane>
 
       <a-entity id="camera_rig_2" position="0 20.81 -33.45" rotation="-23.6 -197 0">
         <a-entity id="camera_2" position="" rotation="" camera="active: false; fov: 50; near: 0.001">
