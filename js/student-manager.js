@@ -4,7 +4,7 @@ AFRAME.registerComponent('student-manager',
     init: function( )
     {   
         var studenttrigger = this.el
-        console.log("this student is" +studenttrigger)
+        console.log("this student is" +studenttrigger.id)
         studenttrigger.addEventListener('click', function( evt ){decrease_score(),check_score(), audio_play()})
 
         function decrease_score(){
