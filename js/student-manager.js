@@ -11,7 +11,7 @@ AFRAME.registerComponent('student-manager',
 
             var score_text = document.getElementById("score_text")
             var score_text_value = score_text.getAttribute('value');
-            console.log("le truc clicke c'est "+ studenttrigger)
+            console.log("le truc clicke c'est "+ studenttrigger.id)
             if (score_text_value > 0){
                 score_text.setAttribute("value", (score_text_value -1))
             }
