@@ -12,8 +12,10 @@ AFRAME.registerComponent('student-manager',
 
         var score_text = document.getElementById("score_text")
         var score_text_value = score_text.getAttribute('value');
-
+        var camille = document.getElementById("camille_end")
+        
         if (score_text_value > 0){
+            camille.emit('theend');
             score_text.setAttribute("value", (score_text_value -1))
         }
     }
