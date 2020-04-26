@@ -9,7 +9,6 @@ AFRAME.registerComponent('student-manager',
 
             var score_text = document.getElementById("score_text")
             var score_text_value = score_text.getAttribute('value');
-            //console.log("le truc clicke c'est "+ studenttrigger.id)
             if (score_text_value > 0){
                 score_text.setAttribute("value", (score_text_value -1))
             }
@@ -35,8 +34,10 @@ AFRAME.registerComponent('student-manager',
 
         function audio_play(){
             studenttrigger = this.el
-            var audio_name = studenttrigger.id.replace('trigger_','');
-            console.log("audio name is "+ audio_name);
+            console.log("this student is" +studenttrigger)
+
+            //var audio_name = studenttrigger.id.replace('trigger_','');
+            //console.log("audio name is "+ audio_name);
             //var audio = document.querySelector('#'+ audio_name);
             //console.log("audio is "+ audio);
 
