@@ -4,15 +4,7 @@ AFRAME.registerComponent('student-manager',
     init: function( )
     {   
         var studenttrigger = this.el
-        //var audio = this.el.components.sound;
-        
-        //console.log("this studenttrigger" +studenttrigger.id)
-        var audio_name = studenttrigger.id.replace('trigger_','audio_');
-        var audio_file = document.querySelector('#'+ audio_name);
-        //console.log("audio is "+ audio_file.id);
-        this.el.addEventListener('click', () => {audio_file.playSound()});
-
-        //studenttrigger.addEventListener('click', function( evt ){decrease_score(),check_score(), play_sound()})
+        studenttrigger.addEventListener('click', function( evt ){decrease_score(),check_score()})
 
         function decrease_score(){
 
