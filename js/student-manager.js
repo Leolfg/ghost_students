@@ -7,8 +7,8 @@ AFRAME.registerComponent('student-manager',
         console.log("this studenttrigger" +studenttrigger.id)
         var student_name = studenttrigger.id.replace('trigger_','');
         console.log("the student name is "+ student_name);
-            //var audio = document.querySelector('#'+ student_name);
-            //console.log("audio is "+ audio);
+        var audio_name = document.querySelector('#'+ student_name);
+        console.log("audio is "+ audio_name);
         
         studenttrigger.addEventListener('click', function( evt ){decrease_score(),check_score(), audio_play()})
 
