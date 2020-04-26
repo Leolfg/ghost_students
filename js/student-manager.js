@@ -9,7 +9,7 @@ AFRAME.registerComponent('student-manager',
         var audio_file = document.querySelector('#'+ audio_name);
         console.log("audio is "+ audio_file.id);
         
-        studenttrigger.addEventListener('click', function( evt ){decrease_score(),check_score(), audio_play()})
+        studenttrigger.addEventListener('click', function( evt ){decrease_score(),check_score(), studenttrigger.components.sound.playSound(audio_file)})
 
 
         function decrease_score(){
@@ -40,15 +40,8 @@ AFRAME.registerComponent('student-manager',
         }
 
         function audio_play(){
-            //var studenttrigger = this.el
-            //console.log("this student is" +studenttrigger)
 
-            //var audio_name = studenttrigger.id.replace('trigger_','');
-            //console.log("audio name is "+ audio_name);
-            //var audio = document.querySelector('#'+ audio_name);
-            //console.log("audio is "+ audio);
-
-            //studenttrigger.components.sound.playSound(audio);
+            //studenttrigger.components.sound.playSound(audio_file);
             //console.log("sound has been played from js")
         }
 
