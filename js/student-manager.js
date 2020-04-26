@@ -2,8 +2,10 @@
 AFRAME.registerComponent('student-manager',
 {
     init: function( )
-    {
-        this.el.addEventListener('click', function( evt ){decrease_score(),check_score(), audio_play()})
+    {   
+        var studenttrigger = this.el
+        console.log("this student is" +studenttrigger)
+        studenttrigger.addEventListener('click', function( evt ){decrease_score(),check_score(), audio_play()})
 
         function decrease_score(){
 
@@ -33,8 +35,8 @@ AFRAME.registerComponent('student-manager',
         }
 
         function audio_play(){
-            studenttrigger = this.el
-            console.log("this student is" +studenttrigger)
+            //var studenttrigger = this.el
+            //console.log("this student is" +studenttrigger)
 
             //var audio_name = studenttrigger.id.replace('trigger_','');
             //console.log("audio name is "+ audio_name);
