@@ -36,8 +36,12 @@ AFRAME.registerComponent('student-manager',
         }
 
         function audio_play(){
-            
-            studenttrigger.components.sound.playSound();
+            var audio_name = studenttrigger.id.replace('trigger_','');
+            console.log("audio name is "+ audio_name);
+            var audio = document.querySelector('#'+ audio_name);
+            console.log("audio is "+ audio);
+
+            studenttrigger.components.sound.playSound(audio);
             console.log("sound has been played from js")
         }
 
