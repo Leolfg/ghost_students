@@ -4,14 +4,14 @@ AFRAME.registerComponent('student-manager',
     init: function( )
     {
         studenttrigger = this.el
-        studenttrigger.addEventListener('click', function( evt ){decrease_score(),check_score()})
+        studenttrigger.addEventListener('click', function( evt ){decrease_score(),check_score(), audio_play()})
 
 
         function decrease_score(){
 
             var score_text = document.getElementById("score_text")
             var score_text_value = score_text.getAttribute('value');
-            console.log("le truc clicke c'est "+ studenttrigger.id)
+            //console.log("le truc clicke c'est "+ studenttrigger.id)
             if (score_text_value > 0){
                 score_text.setAttribute("value", (score_text_value -1))
             }
@@ -33,6 +33,12 @@ AFRAME.registerComponent('student-manager',
                 camera_2.setAttribute('camera', 'active', true)
             }
     
+        }
+
+        function audio_play(){
+            
+            studenttrigger.components.sound.playSound();
+            console.log("sound has been played from js")
         }
 
     }
