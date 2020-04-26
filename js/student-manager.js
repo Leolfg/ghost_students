@@ -9,8 +9,7 @@ AFRAME.registerComponent('student-manager',
         var audio_file = document.querySelector('#'+ audio_name);
         console.log("audio is "+ audio_file.id);
         
-        studenttrigger.addEventListener('click', function( evt ){decrease_score(),check_score(), audio_file.play()})
-
+        studenttrigger.addEventListener('click', function( evt ){decrease_score(),check_score(), () => {audio_file.play()}})
 
         function decrease_score(){
 
