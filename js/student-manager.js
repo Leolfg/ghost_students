@@ -10,8 +10,11 @@ AFRAME.registerComponent('student-manager',
         var audio_name = studenttrigger.id.replace('trigger_','audio_');
         var audio_file = document.querySelector('#'+ audio_name);
         console.log("audio is "+ audio_file.id);*/
-        
-        studenttrigger.addEventListener('click', function( evt ){decrease_score(),check_score(), play_sound()})
+        this.el.addEventListener('click', () => {
+            audio.play
+       });
+
+        //studenttrigger.addEventListener('click', function( evt ){decrease_score(),check_score(), play_sound()})
 
         function decrease_score(){
 
@@ -38,11 +41,6 @@ AFRAME.registerComponent('student-manager',
                 camera_2.setAttribute('camera', 'active', true)
             }
     
-        }
-
-        function play_sound(){
-            audio.playSound();
-            console.log("sound played is " + audio.id)
         }
 
     }
